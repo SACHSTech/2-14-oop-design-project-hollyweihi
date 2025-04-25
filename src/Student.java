@@ -12,4 +12,7 @@ public class Student extends Person{
         return studentId;
     }
 
+    public int getAbsent(){
+        return absent;
+    }
 }
