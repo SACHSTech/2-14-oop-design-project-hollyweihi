@@ -15,4 +15,15 @@ public class Student extends Person{
     public int getAbsent(){
         return absent;
     }
+
+    public String getDrop(){
+        String answer = "";
+        if (getAbsent() > 4){
+            answer = "You've been kick out of the class.";
+            return answer;
+        } else {
+            answer = "You are in the class.";
+            return answer;
+        }
+    }
 }
