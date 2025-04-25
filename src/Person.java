@@ -4,4 +4,8 @@ public abstract class Person {
     public Person(int id){
         this.id = id;
     }
+
+    public int getId(){
+        return id;
+    }
 }
