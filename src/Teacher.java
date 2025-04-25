@@ -5,4 +5,8 @@ public class Teacher extends Person {
         super(name);
         this.employeeId = employeeId;
     }
+
+    public int getEmployeeId(){
+        return employeeId;
+    }
 }
