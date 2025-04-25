@@ -12,4 +12,8 @@ public class Grade {
     public double getScore(){
         return score;
     }
+
+    public String getCourseName(){
+        return courseName;
+    }
 }
