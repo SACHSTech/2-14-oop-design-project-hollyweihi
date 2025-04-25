@@ -16,4 +16,8 @@ public class Grade {
     public String getCourseName(){
         return courseName;
     }
+
+    public int getCourseId(){
+        return courseId;
+    }
 }
