@@ -8,4 +8,8 @@ public class Grade {
         this.courseName = courseName;
         this.courseId = courseId;
     }
+
+    public double getScore(){
+        return score;
+    }
 }
