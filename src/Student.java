@@ -8,4 +8,8 @@ public class Student extends Person{
         this.absent = absent;
     }
 
+    public int getStudentID(){
+        return studentId;
+    }
+
 }
