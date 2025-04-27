@@ -25,6 +25,15 @@ public class Main {
             System.out.println("Please Enter your course code: ");
             String courseCode = keyboard.readLine();
 
+            double totalGrade = 0;
+            double grade = 1;
+            while(grade != 0){
+                System.out.println("Enter the grade(Enter 0 if there are no more grade): ");
+                grade = Double.parseDouble(keyboard.readLine());
+
+                totalGrade += grade;
+            } 
+
 
 
 
