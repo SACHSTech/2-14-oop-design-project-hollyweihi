@@ -6,5 +6,10 @@ public class Main {
 
         System.out.println("Please Enter your Student/Employee ID: ");
         int studentId = Integer.parseInt(keyboard.readLine());
+
+        System.out.println("Please Enter your Name: ");
+        String name = keyboard.readLine();
+
+        
     }
 }
