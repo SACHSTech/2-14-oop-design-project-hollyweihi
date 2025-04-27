@@ -20,6 +20,17 @@ public class Main {
         int numberOfCourse = Integer.parseInt(keyboard.readLine());
         if (numberOfCourse == 1){
             System.out.println("Enter Detail for course");
+            System.out.println("Please Enter your course name: ");
+            String courseName = keyboard.readLine();
+            System.out.println("Please Enter your course code: ");
+            String courseCode = keyboard.readLine();
+
+
+
+
+
+
+
         } else if (numberOfCourse == 2){
             System.out.println("Please enter Detail for Course 1");
             System.out.println("Please enter Detail for Course 2");
