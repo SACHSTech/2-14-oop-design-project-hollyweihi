@@ -10,6 +10,9 @@ public class Main {
         System.out.println("Please Enter your Name: ");
         String name = keyboard.readLine();
 
+        System.out.println("Please Enter the number of your absend Day: ");
+        int absend = Integer.parseInt(keyboard.readLine());
+
         
     }
 }
