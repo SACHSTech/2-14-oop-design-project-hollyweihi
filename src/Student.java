@@ -1,11 +1,15 @@
+import java.util.List;
+
 public class Student extends Person{
     private int studentId;
     private int absent;
+    private List<Grade> grades;
 
-    public Student(String name, int studentId, int absent){
+    public Student(String name, int studentId, List<Grade> grades, int absent){
         super(name);
         this.studentId = studentId;
         this.absent = absent;
+        this.grades = grades;
     }
 
     public int getStudentID(){
