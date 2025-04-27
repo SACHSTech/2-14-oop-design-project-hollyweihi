@@ -66,4 +66,22 @@ public class Grade {
         }
        return letter;
     }
+
+    public String getLevelGrade(){
+        int level = 0;
+
+        if(score >=80 && score<=100){
+            level = 4;
+        }else if(score >= 70 && score <80){
+            level = 3;
+        }else if (score >= 60 && score <70){
+            level = 2;
+
+        }else if (score >= 50 && score < 60){
+            level = 1;
+        }else if(score < 50){
+            return "Level R";
+        }
+        return "Level " + level;
+    }
 }
