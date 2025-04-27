@@ -1,5 +1,6 @@
 import java.io.*;
-
+import java.util.List;
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) throws IOException{
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
@@ -13,6 +14,6 @@ public class Main {
         System.out.println("Please Enter the number of your absend Day: ");
         int absend = Integer.parseInt(keyboard.readLine());
 
-        
+        List <Grade> grades = new ArrayList();
     }
 }
