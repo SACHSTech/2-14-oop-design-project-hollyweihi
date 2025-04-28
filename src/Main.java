@@ -5,14 +5,11 @@ public class Main {
     public static void main(String[] args) throws IOException{
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("Please Enter your Student/Employee ID: ");
+        System.out.println("Please Enter your Student/Employee ID (6 digit): ");
         int studentId = Integer.parseInt(keyboard.readLine());
 
         System.out.println("Please Enter your Name: ");
         String name = keyboard.readLine();
-
-        System.out.println("Please Enter the number of your absend Day: ");
-        int absend = Integer.parseInt(keyboard.readLine());
 
         List <Grade> grades = new ArrayList();
 
@@ -24,6 +21,18 @@ public class Main {
             String courseName = keyboard.readLine();
             System.out.println("Please Enter your course code: ");
             String courseCode = keyboard.readLine();
+
+            System.out.println("Please Enter the number of your absend Day: ");
+            int absend = Integer.parseInt(keyboard.readLine());
+    
+            if(absend > 4){
+                System.out.println("You are been drop out of the class. ");
+            }else if (absend > 3 && absend <= 4){
+                System.out.println("You are almost drop out of this class. ");
+    
+            }else {
+                System.out.println(" ");
+            }
 
             double totalGrade = 0;
             double score = 1;
