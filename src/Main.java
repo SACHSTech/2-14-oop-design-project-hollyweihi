@@ -27,16 +27,24 @@ public class Main {
 
             double totalGrade = 0;
             double score = 1;
-            while(score != 0){
-                System.out.println("Enter the score(Enter 0 if there are no more score): ");
+            int numberOfGrade = 0;
+            System.out.println("Please enter the number of grade you have: ");
+            numberOfGrade = Integer.parseInt(keyboard.readLine());
+            for(int i = 0; i < numberOfGrade; i++){
+                System.out.println("Enter the score: ");
                 score = Double.parseDouble(keyboard.readLine());
+                if(score > 100){
+                    System.out.println("It's not a possible score.");
+                } else if (score < 0){
+                    System.out.println("It's not a possible score.");
+                }
                 grades.add(new Grade(score, courseName, courseCode));
                 totalGrade += score;
-            } 
 
-
-
-
+                
+            }
+            double average = totalGrade/numberOfGrade;
+            System.out.println("Your Average for this course is " + average);
 
 
 
