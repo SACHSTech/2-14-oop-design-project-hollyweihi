@@ -51,7 +51,7 @@ public class Main {
             scores.add(score);
         }
 
-        grades.add(new Grade(score, courseName, courseCode));
+        grades.add(new Grade(scores, courseName, courseCode));
 
         Student student = new Student(name, studentId, grades, absent);
         System.out.println();
