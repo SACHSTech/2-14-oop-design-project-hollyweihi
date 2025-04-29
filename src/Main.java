@@ -27,20 +27,21 @@ public class Main {
             }
         }
 
-        for (int i = 0; i < numberOfCourse; i++){
-
         // Create List
         List<Grade> grades = new ArrayList();
 
-        System.out.println("Please Enter the number of absent: ");
-        int absent = Integer.parseInt(keyboard.readLine());
 
+        for (int i = 0; i < numberOfCourse; i++){
         // Ask detail
         System.out.println("\nEnter Detail for course " + (i + 1));
         System.out.println("Please Enter your course name: ");
         String courseName = keyboard.readLine();
         System.out.println("Please Enter your course code: ");
         String courseCode = keyboard.readLine();
+
+        System.out.println("Please Enter the number of absent: ");
+        int absent = Integer.parseInt(keyboard.readLine());
+
 
         // Ask Score
         double totalGrade = 0;
@@ -66,28 +67,22 @@ public class Main {
         }
 
         grades.add(new Grade(scores, courseName, courseCode));
+    }
 
-        Student student = new Student(name, studentId, grades, absent);
-        System.out.println();
-
-        System.out.println("Your Average for this course is " + student.getAverage());
-
+        Student student = new Student(name, studentId, grades);
         // Summary
 
         System.out.println();
         System.out.println("Student Info: ");
         System.out.println("Name: " + student.getName());
         System.out.println("Student ID: " + student.getStudentID());
-        System.out.println("Absences: " + student.getAbsent());
-        System.out.println(student.getDrop());
 
         // Average
         System.out.println();
         System.out.println("Course Averages: ");
-        for (int j = 0; j < grades.size(); j++){
-            Grade grade = grades.get(j);
+        for (int i = 0; i < grades.size(); i++){
+            Grade grade = grades.get(i);
             System.out.println(grade.getCourseName() + ": " + grade.getAverageScore());
         }
     }
-}
 }

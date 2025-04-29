@@ -5,7 +5,7 @@ public class Student extends Person{
     private int absent;
     private List<Grade> grades;
 
-    public Student(String name, int studentId, List<Grade> grades, int absent){
+    public Student(String name, int studentId, List<Grade> grades){
         super(name);
         this.studentId = studentId;
         this.absent = absent;
