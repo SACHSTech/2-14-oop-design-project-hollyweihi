@@ -18,11 +18,23 @@ public class Main {
         System.out.println("Please Enter the number of absent: ");
         int absent = Integer.parseInt(keyboard.readLine());
 
+        int numberOfCourse = 0;
+        while(true){
+            System.out.print("How many course do you have: ");
+            numberOfCourse = Integer.parseInt(keyboard.readLine());
+
+            if(numberOfCourse >= 1 && numberOfCourse <= 5){
+                break;
+            }else{
+                System.out.println("This is not a possible number of course.");
+            }
+        }
+
         // Create List
         List<Grade> grades = new ArrayList();
 
         // Ask detail
-        System.out.println("Enter Detail for course");
+        System.out.println("\nEnter Detail for course");
         System.out.println("Please Enter your course name: ");
         String courseName = keyboard.readLine();
         System.out.println("Please Enter your course code: ");
