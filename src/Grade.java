@@ -23,6 +23,15 @@ public class Grade {
         return courseId;
     }
 
+    public double getAverageScore(){
+        double total = 0;
+        for(int i = 0; i < scores.size(); i++){
+            total += scores.get(i);
+        }
+
+        return total / scores.size();
+
+    }
     public double getGPA(){
         double GPA = 0;
         GPA = (score/100) * 4;
