@@ -78,5 +78,13 @@ public class Main {
         System.out.println("Student ID: " + student.getStudentID());
         System.out.println("Absences: " + student.getAbsent());
         System.out.println(student.getDrop());
+
+        // Average
+        System.out.println();
+        System.out.println("Course Averages: ");
+        for (int i = 0; i < grades.size(); i++){
+            Grade grade = grades.get(i);
+            System.out.println(grade.getCourseName() + ": " + grade.getAverageScore());
+        }
     }
 }
