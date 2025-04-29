@@ -30,6 +30,8 @@ public class Main {
             }
         }
 
+        for (int i = 0; i < numberOfCourse; i++){
+
         // Create List
         List<Grade> grades = new ArrayList();
 
@@ -52,7 +54,7 @@ public class Main {
         // Create Array List
         List<Double> scores = new ArrayList();
 
-        for (int i = 0; i < numberOfGrade; i++) {
+        for (int a = 0; a < numberOfGrade; a++) {
             System.out.println("Enter the score: ");
             score = Double.parseDouble(keyboard.readLine());
             if (score > 100) {
@@ -82,9 +84,10 @@ public class Main {
         // Average
         System.out.println();
         System.out.println("Course Averages: ");
-        for (int i = 0; i < grades.size(); i++){
-            Grade grade = grades.get(i);
+        for (int j = 0; j < grades.size(); j++){
+            Grade grade = grades.get(j);
             System.out.println(grade.getCourseName() + ": " + grade.getAverageScore());
         }
     }
+}
 }
