@@ -82,6 +82,7 @@ public class Grade {
 
     public String getLevelGrade(){
         int level = 0;
+        double score = getAverageScore();
 
         if(score >=80 && score<=100){
             level = 4;
