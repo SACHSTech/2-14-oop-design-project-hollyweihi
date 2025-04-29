@@ -69,5 +69,14 @@ public class Main {
         System.out.println();
 
         System.out.println("Your Average for this course is " + student.getAverage());
+
+        // Summary
+
+        System.out.println();
+        System.out.println("Student Info: ");
+        System.out.println("Name: " + student.getName());
+        System.out.println("Student ID: " + student.getStudentID());
+        System.out.println("Absences: " + student.getAbsent());
+        System.out.println(student.getDrop());
     }
 }
