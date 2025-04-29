@@ -41,6 +41,7 @@ public class Grade {
 
     public String getLetterGrade(){
         String letter = "";
+        double score = getAverageScore();
 
         if(score >= 95){
             letter = "A+";
