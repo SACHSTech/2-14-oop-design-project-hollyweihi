@@ -33,6 +33,7 @@ public class Grade {
 
     }
     public double getGPA(){
+        double score = getAverageScore();
         double GPA = 0;
         GPA = (score/100) * 4;
         return GPA;
