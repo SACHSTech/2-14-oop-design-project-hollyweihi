@@ -4,13 +4,13 @@ public class Grade {
     private List<Double> scores;
     private String courseName;
     private String courseId;
-    private double weight;
+    private double totalWeight;
 
-    public Grade(List<Double> scores, String courseName, String courseId, double weight) {
+    public Grade(List<Double> scores, String courseName, String courseId, double totalWeight) {
         this.scores = scores;
         this.courseName = courseName;
         this.courseId = courseId;
-        this.weight = weight;
+        this.totalWeight = totalWeight;
     }
 
     public List<Double> getScore() {
@@ -18,7 +18,7 @@ public class Grade {
     }
 
     public double getWeight(){
-        return weight;
+        return totalWeight;
     }
 
     public String getCourseName() {
@@ -35,7 +35,7 @@ public class Grade {
             total += scores.get(i);
         }
 
-        return total / scores.size();
+        return (total/totalWeight) * 100;
 
     }
 

@@ -30,6 +30,7 @@ public class Main {
         // Create List
         List<Grade> grades = new ArrayList();
         Student student = new Student(name, studentId, grades);
+        double totalWeight = 0;
 
         for (int i = 0; i < numberOfCourse; i++) {
             // Ask detail
@@ -60,9 +61,9 @@ public class Main {
 
                 // Create Array List
                 List<Double> scores = new ArrayList();
+                
 
                 for (int a = 0; a < numberOfGrade; a++) {
-                    double weight = 0;
                     System.out.println("Enter the score: ");
                     score = Double.parseDouble(keyboard.readLine());
                     if (score > 100) {
@@ -71,16 +72,17 @@ public class Main {
                         System.out.println("It's not a possible score.");
                     }else {
 
+                        
                     System.out.println("Enter the weight of this score (in %): ");
                     weights = Double.parseDouble(keyboard.readLine());
-                    
-                    score = score * (weight/100);
-
-                    scores.add(score);
+                    totalWeight += weights;
+                    totalGrade = score * (weights/100);
+                    System.out.println(totalGrade);
+                    scores.add(totalGrade);
                 }
             }
 
-                grades.add(new Grade(scores, courseName, courseCode, weights));
+                grades.add(new Grade(scores, courseName, courseCode, totalWeight));
             }
         }
         // Summary
