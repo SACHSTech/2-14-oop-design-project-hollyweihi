@@ -15,8 +15,14 @@ public class Main {
         System.out.println("Please Enter your Name: ");
         String name = keyboard.readLine();
 
+        System.out.println("Please Enter the number of absent: ");
+        int absent = Integer.parseInt(keyboard.readLine());
+
         // Create List
         List<Grade> grades = new ArrayList();
+
+        Student student = new Student(name, studentId, grades, absent);
+        System.out.println();
 
         // Number of Course
         System.out.println("Please Enter the Number of Course you have: ");
