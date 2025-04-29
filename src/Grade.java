@@ -4,11 +4,13 @@ public class Grade {
     private List<Double> scores;
     private String courseName;
     private String courseId;
+    private double weight;
 
     public Grade(List<Double> scores, String courseName, String courseId) {
         this.scores = scores;
         this.courseName = courseName;
         this.courseId = courseId;
+        this.weight = weight;
     }
 
     public List<Double> getScore() {

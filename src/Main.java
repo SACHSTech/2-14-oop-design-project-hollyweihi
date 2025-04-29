@@ -29,6 +29,7 @@ public class Main {
 
         // Create List
         List<Grade> grades = new ArrayList();
+        Student student = new Student(name, studentId, grades);
 
         for (int i = 0; i < numberOfCourse; i++) {
             // Ask detail
@@ -43,6 +44,7 @@ public class Main {
 
             if (absent > 4) {
                 System.out.println("You've been kick out of the class.");
+
             } else {
                 System.out.println("You are in the class.");
 
@@ -50,13 +52,15 @@ public class Main {
                 double totalGrade = 0;
                 double score = 1;
                 int numberOfGrade = 0;
+                double weights = 0;
 
                 // ask for number of grade
                 System.out.println("\nPlease enter the number of grade you have: ");
                 numberOfGrade = Integer.parseInt(keyboard.readLine());
 
                 // Create Array List
-                List<Double> scores = new ArrayList();
+                List<Double> totalScores = new ArrayList();
+                List<Double> weight = new ArrayList();
 
                 for (int a = 0; a < numberOfGrade; a++) {
                     System.out.println("Enter the score: ");
@@ -66,14 +70,20 @@ public class Main {
                     } else if (score < 0) {
                         System.out.println("It's not a possible score.");
                     }
-                    scores.add(score);
+
+                    System.out.println("Enter the weight of this score (in %): ");
+                    weights = Double.parseDouble(keyboard.readLine());
+
+                    score = score * (weights/100);
+                    totalScores.add(score);
+                    weight.add(weights);
+
+                    
                 }
 
-                grades.add(new Grade(scores, courseName, courseCode));
+                grades.add(new Grade(totalScores, courseName, courseCode));
             }
         }
-
-        Student student = new Student(name, studentId, grades);
         // Summary
 
         System.out.println();
@@ -83,10 +93,14 @@ public class Main {
 
         // Average
         System.out.println();
-        System.out.println("Course Averages: ");
+        System.out.println("Course Grade: ");
         for (int i = 0; i < grades.size(); i++) {
             Grade grade = grades.get(i);
-            System.out.println(grade.getCourseName() + ": " + grade.getAverageScore());
+            System.out.println("\n" + grade.getCourseName());
+            System.out.println("Average: " + grade.getAverageScore());
+            System.out.println("GPA: " + grade.getGPA());
+            System.out.println("Letter Grade: " + grade.getLetterGrade());
+            System.out.println("Level Grade: " + grade.getLevelGrade());
         }
     }
 }
