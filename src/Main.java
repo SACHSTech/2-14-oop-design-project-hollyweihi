@@ -16,13 +16,13 @@ public class Main {
         String name = keyboard.readLine();
 
         int numberOfCourse = 0;
-        while(true){
-            System.out.print("How many course do you have: ");
+        while (true) {
+            System.out.println("How many course do you have: ");
             numberOfCourse = Integer.parseInt(keyboard.readLine());
 
-            if(numberOfCourse >= 1 && numberOfCourse <= 5){
+            if (numberOfCourse >= 1 && numberOfCourse <= 5) {
                 break;
-            }else{
+            } else {
                 System.out.println("This is not a possible number of course.");
             }
         }
@@ -30,50 +30,48 @@ public class Main {
         // Create List
         List<Grade> grades = new ArrayList();
 
+        for (int i = 0; i < numberOfCourse; i++) {
+            // Ask detail
+            System.out.println("\nEnter Detail for course " + (i + 1));
+            System.out.println("Please Enter your course name: ");
+            String courseName = keyboard.readLine();
+            System.out.println("Please Enter your course code: ");
+            String courseCode = keyboard.readLine();
 
-        for (int i = 0; i < numberOfCourse; i++){
-        // Ask detail
-        System.out.println("\nEnter Detail for course " + (i + 1));
-        System.out.println("Please Enter your course name: ");
-        String courseName = keyboard.readLine();
-        System.out.println("Please Enter your course code: ");
-        String courseCode = keyboard.readLine();
+            System.out.println("Please Enter the number of absent: ");
+            int absent = Integer.parseInt(keyboard.readLine());
 
-        System.out.println("Please Enter the number of absent: ");
-        int absent = Integer.parseInt(keyboard.readLine());
+            if (absent > 4) {
+                System.out.println("You've been kick out of the class.");
+            } else {
+                System.out.println("You are in the class.");
 
-        if (absent > 4){
-            System.out.println("You've been kick out of the class.");
-        } else {
-            System.out.println("You are in the class.");
-        
+                // Ask Score
+                double totalGrade = 0;
+                double score = 1;
+                int numberOfGrade = 0;
 
-        // Ask Score
-        double totalGrade = 0;
-        double score = 1;
-        int numberOfGrade = 0;
+                // ask for number of grade
+                System.out.println("\nPlease enter the number of grade you have: ");
+                numberOfGrade = Integer.parseInt(keyboard.readLine());
 
-        // ask for number of grade
-        System.out.println("Please enter the number of grade you have: ");
-        numberOfGrade = Integer.parseInt(keyboard.readLine());
+                // Create Array List
+                List<Double> scores = new ArrayList();
 
-        // Create Array List
-        List<Double> scores = new ArrayList();
+                for (int a = 0; a < numberOfGrade; a++) {
+                    System.out.println("Enter the score: ");
+                    score = Double.parseDouble(keyboard.readLine());
+                    if (score > 100) {
+                        System.out.println("It's not a possible score.");
+                    } else if (score < 0) {
+                        System.out.println("It's not a possible score.");
+                    }
+                    scores.add(score);
+                }
 
-        for (int a = 0; a < numberOfGrade; a++) {
-            System.out.println("Enter the score: ");
-            score = Double.parseDouble(keyboard.readLine());
-            if (score > 100) {
-                System.out.println("It's not a possible score.");
-            } else if (score < 0) {
-                System.out.println("It's not a possible score.");
+                grades.add(new Grade(scores, courseName, courseCode));
             }
-            scores.add(score);
         }
-
-        grades.add(new Grade(scores, courseName, courseCode));
-    }
-    }
 
         Student student = new Student(name, studentId, grades);
         // Summary
@@ -86,7 +84,7 @@ public class Main {
         // Average
         System.out.println();
         System.out.println("Course Averages: ");
-        for (int i = 0; i < grades.size(); i++){
+        for (int i = 0; i < grades.size(); i++) {
             Grade grade = grades.get(i);
             System.out.println(grade.getCourseName() + ": " + grade.getAverageScore());
         }
