@@ -15,9 +15,6 @@ public class Main {
         System.out.println("Please Enter your Name: ");
         String name = keyboard.readLine();
 
-        System.out.println("Please Enter the number of absent: ");
-        int absent = Integer.parseInt(keyboard.readLine());
-
         int numberOfCourse = 0;
         while(true){
             System.out.print("How many course do you have: ");
@@ -35,8 +32,11 @@ public class Main {
         // Create List
         List<Grade> grades = new ArrayList();
 
+        System.out.println("Please Enter the number of absent: ");
+        int absent = Integer.parseInt(keyboard.readLine());
+
         // Ask detail
-        System.out.println("\nEnter Detail for course");
+        System.out.println("\nEnter Detail for course " + (i + 1));
         System.out.println("Please Enter your course name: ");
         String courseName = keyboard.readLine();
         System.out.println("Please Enter your course code: ");
