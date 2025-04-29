@@ -5,7 +5,7 @@ public class Grade {
     private String courseName;
     private String courseId;
 
-    public Grade(double score, String courseName, String courseId){
+    public Grade(List<Double> scores, String courseName, String courseId){
         this.scores = scores;
         this.courseName = courseName;
         this.courseId = courseId;

@@ -35,7 +35,7 @@ public class Student extends Person{
         double totalGrade = 0.00;
 
         for (int i = 0; i < grades.size(); i++){
-            totalGrade += grades.get(i).getScore();
+            totalGrade += grades.get(i).getAverageScore();
         }
 
         double average = totalGrade/grades.size();

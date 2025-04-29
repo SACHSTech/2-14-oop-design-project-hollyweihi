@@ -53,10 +53,9 @@ public class Main {
 
         grades.add(new Grade(score, courseName, courseCode));
 
-        double average = totalGrade / numberOfGrade;
-        System.out.println("Your Average for this course is " + average);
-
         Student student = new Student(name, studentId, grades, absent);
         System.out.println();
+
+        System.out.println("Your Average for this course is " + student.getAverage());
     }
 }
