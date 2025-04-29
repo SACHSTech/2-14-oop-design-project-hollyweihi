@@ -1,16 +1,18 @@
+import java.util.List;
+
 public class Grade {
-    private double score;
+    private List<Double> scores;
     private String courseName;
     private String courseId;
 
     public Grade(double score, String courseName, String courseId){
-        this.score = score;
+        this.scores = scores;
         this.courseName = courseName;
         this.courseId = courseId;
     }
 
-    public double getScore(){
-        return score;
+    public List<Double> getScore(){
+        return scores;
     }
 
     public String getCourseName(){
