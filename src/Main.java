@@ -59,29 +59,28 @@ public class Main {
                 numberOfGrade = Integer.parseInt(keyboard.readLine());
 
                 // Create Array List
-                List<Double> totalScores = new ArrayList();
-                List<Double> weight = new ArrayList();
+                List<Double> scores = new ArrayList();
 
                 for (int a = 0; a < numberOfGrade; a++) {
+                    double weight = 0;
                     System.out.println("Enter the score: ");
                     score = Double.parseDouble(keyboard.readLine());
                     if (score > 100) {
                         System.out.println("It's not a possible score.");
                     } else if (score < 0) {
                         System.out.println("It's not a possible score.");
-                    }
+                    }else {
 
                     System.out.println("Enter the weight of this score (in %): ");
                     weights = Double.parseDouble(keyboard.readLine());
-
-                    score = score * (weights/100);
-                    totalScores.add(score);
-                    weight.add(weights);
-
                     
-                }
+                    score = score * (weight/100);
 
-                grades.add(new Grade(totalScores, courseName, courseCode));
+                    scores.add(score);
+                }
+            }
+
+                grades.add(new Grade(scores, courseName, courseCode, weights));
             }
         }
         // Summary

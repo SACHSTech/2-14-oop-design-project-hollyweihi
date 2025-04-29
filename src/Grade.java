@@ -6,7 +6,7 @@ public class Grade {
     private String courseId;
     private double weight;
 
-    public Grade(List<Double> scores, String courseName, String courseId) {
+    public Grade(List<Double> scores, String courseName, String courseId, double weight) {
         this.scores = scores;
         this.courseName = courseName;
         this.courseId = courseId;
@@ -15,6 +15,10 @@ public class Grade {
 
     public List<Double> getScore() {
         return scores;
+    }
+
+    public double getWeight(){
+        return weight;
     }
 
     public String getCourseName() {
