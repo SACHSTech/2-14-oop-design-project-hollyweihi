@@ -42,6 +42,11 @@ public class Main {
         System.out.println("Please Enter the number of absent: ");
         int absent = Integer.parseInt(keyboard.readLine());
 
+        if (absent > 4){
+            System.out.println("You've been kick out of the class.");
+        } else {
+            System.out.println("You are in the class.");
+        
 
         // Ask Score
         double totalGrade = 0;
@@ -67,6 +72,7 @@ public class Main {
         }
 
         grades.add(new Grade(scores, courseName, courseCode));
+    }
     }
 
         Student student = new Student(name, studentId, grades);
