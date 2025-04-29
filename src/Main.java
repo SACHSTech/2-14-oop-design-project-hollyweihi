@@ -22,42 +22,41 @@ public class Main {
         List<Grade> grades = new ArrayList();
 
         // Ask detail
-            System.out.println("Enter Detail for course");
-            System.out.println("Please Enter your course name: ");
-            String courseName = keyboard.readLine();
-            System.out.println("Please Enter your course code: ");
-            String courseCode = keyboard.readLine();
+        System.out.println("Enter Detail for course");
+        System.out.println("Please Enter your course name: ");
+        String courseName = keyboard.readLine();
+        System.out.println("Please Enter your course code: ");
+        String courseCode = keyboard.readLine();
 
-            // Ask Score
-                double totalGrade = 0;
-                double score = 1;
-                int numberOfGrade = 0;
+        // Ask Score
+        double totalGrade = 0;
+        double score = 1;
+        int numberOfGrade = 0;
 
-                // ask for number of grade
-                System.out.println("Please enter the number of grade you have: ");
-                numberOfGrade = Integer.parseInt(keyboard.readLine());
+        // ask for number of grade
+        System.out.println("Please enter the number of grade you have: ");
+        numberOfGrade = Integer.parseInt(keyboard.readLine());
 
-                // Create Array List
-                List<Double> scores = new ArrayList();
+        // Create Array List
+        List<Double> scores = new ArrayList();
 
-                for (int i = 0; i < numberOfGrade; i++) {
-                    System.out.println("Enter the score: ");
-                    score = Double.parseDouble(keyboard.readLine());
-                    if (score > 100) {
-                        System.out.println("It's not a possible score.");
-                    } else if (score < 0) {
-                        System.out.println("It's not a possible score.");
-                    }
-                    scores.add(score);
-                }
+        for (int i = 0; i < numberOfGrade; i++) {
+            System.out.println("Enter the score: ");
+            score = Double.parseDouble(keyboard.readLine());
+            if (score > 100) {
+                System.out.println("It's not a possible score.");
+            } else if (score < 0) {
+                System.out.println("It's not a possible score.");
+            }
+            scores.add(score);
+        }
 
-                grades.add(new Grade(score, courseName, courseCode));
+        grades.add(new Grade(score, courseName, courseCode));
 
-                double average = totalGrade / numberOfGrade;
-                System.out.println("Your Average for this course is " + average);
-
+        double average = totalGrade / numberOfGrade;
+        System.out.println("Your Average for this course is " + average);
 
         Student student = new Student(name, studentId, grades, absent);
         System.out.println();
-            }
-        }
+    }
+}
