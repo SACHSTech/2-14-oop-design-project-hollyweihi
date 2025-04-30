@@ -8,4 +8,9 @@ public abstract class Person {
     public String getName() {
         return name;
     }
+
+    public String toString(){
+        String answer = ("This is a Summary of " + name + "'s course grade.");
+        return answer; 
+    }
 }
