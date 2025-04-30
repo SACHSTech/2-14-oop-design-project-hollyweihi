@@ -33,6 +33,10 @@ public class Main {
         double totalWeight = 0;
 
         for (int i = 0; i < numberOfCourse; i++) {
+            totalWeight = 0;
+            double totalGrade = 0;
+            double score = 1;
+            double weights = 0;
             // Ask detail
             System.out.println("\nEnter Detail for course " + (i + 1));
             System.out.println("Please Enter your course name: ");
@@ -49,11 +53,7 @@ public class Main {
             } else {
                 System.out.println("You are in the class.");
 
-                // Ask Score
-                double totalGrade = 0;
-                double score = 1;
                 int numberOfGrade = 0;
-                double weights = 0;
 
                 // ask for number of grade
                 System.out.println("\nPlease enter the number of grade you have: ");
@@ -61,26 +61,25 @@ public class Main {
 
                 // Create Array List
                 List<Double> scores = new ArrayList();
-                
 
                 for (int a = 0; a < numberOfGrade; a++) {
+
                     System.out.println("Enter the score: ");
                     score = Double.parseDouble(keyboard.readLine());
                     if (score > 100) {
                         System.out.println("It's not a possible score.");
                     } else if (score < 0) {
                         System.out.println("It's not a possible score.");
-                    }else {
+                    } else {
 
-                        
-                    System.out.println("Enter the weight of this score (in %): ");
-                    weights = Double.parseDouble(keyboard.readLine());
-                    totalWeight += weights;
-                    totalGrade = score * (weights/100);
-                    System.out.println(totalGrade);
-                    scores.add(totalGrade);
+                        System.out.println("Enter the weight of this score (in %): ");
+                        weights = Double.parseDouble(keyboard.readLine());
+                        totalWeight += weights;
+                        totalGrade = score * (weights / 100);
+                        System.out.println(totalWeight);
+                        scores.add(totalGrade);
+                    }
                 }
-            }
 
                 grades.add(new Grade(scores, courseName, courseCode, totalWeight));
             }
