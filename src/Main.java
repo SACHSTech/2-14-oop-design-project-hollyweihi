@@ -7,6 +7,9 @@ public class Main {
         // User input
         BufferedReader keyboard = new BufferedReader(new InputStreamReader(System.in));
 
+        System.out.println("Are you a student or teacher: ");
+        String user = keyboard.readLine();
+
         // Enter ID
         System.out.println("Please Enter your Student/Employee ID (6 digit): ");
         int studentId = Integer.parseInt(keyboard.readLine());
