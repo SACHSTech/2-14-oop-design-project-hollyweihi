@@ -14,6 +14,8 @@ public class Main {
 
         Student student1 = new Student("Holly", 333333);
         Student student2 = new Student("Bob", 200002);
+        students.add(student1);
+        students.add(student2);
 
         mathTeacher.addCourse("MDM4U");
         scienceTeacher.addCourse("SBI4U");
