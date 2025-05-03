@@ -39,6 +39,10 @@ public class Student extends Person {
         return grades;
     }
 
+    public void addGrade(Grade grade){
+        grades.add(grade);
+    }
+
     /**
      * Calculate the student average.
      * 
