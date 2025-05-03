@@ -6,6 +6,17 @@ public class Grade {
     private String courseId;
     private double totalWeight;
 
+    /**
+     * Construct a new Grade.
+     * 
+     * @param scores      The student's test score
+     * @param courseName  The course name of a student
+     * @param courseId    The course code/ID of a course
+     * @param totalWeight The total weight of each score
+     * 
+     * @author Holly Wei
+     */
+
     public Grade(List<Double> scores, String courseName, String courseId, double totalWeight) {
         this.scores = scores;
         this.courseName = courseName;
@@ -13,32 +24,62 @@ public class Grade {
         this.totalWeight = totalWeight;
     }
 
+    /**
+     * Retrun Student's test score.
+     * 
+     * @return student's test score
+     */
     public List<Double> getScore() {
         return scores;
     }
 
-    public double getWeight(){
+    /**
+     * Return total weight of score.
+     * 
+     * @return total weight of scores
+     */
+    public double getWeight() {
         return totalWeight;
     }
 
+    /**
+     * Return the course name.
+     * 
+     * @return course name
+     */
     public String getCourseName() {
         return courseName;
     }
 
+    /**
+     * Return course code.
+     * 
+     * @return course code
+     */
     public String getCourseId() {
         return courseId;
     }
 
+    /**
+     * Calculate the average score.
+     * 
+     * @return average score
+     */
     public double getAverageScore() {
         double total = 0;
         for (int i = 0; i < scores.size(); i++) {
             total += scores.get(i);
         }
 
-        return (total/totalWeight) * 100;
+        return (total / totalWeight) * 100;
 
     }
 
+    /**
+     * Convert percentage score to GPA.
+     * 
+     * @return GPA
+     */
     public double getGPA() {
         double score = getAverageScore();
         double GPA = 0;
@@ -46,6 +87,11 @@ public class Grade {
         return GPA;
     }
 
+    /**
+     * Convert percentage score to letter grade.
+     * 
+     * @return letter grade
+     */
     public String getLetterGrade() {
         String letter = "";
         double score = getAverageScore();
@@ -87,6 +133,11 @@ public class Grade {
         return letter;
     }
 
+    /**
+     * Convert percentage score to level grade.
+     * 
+     * @return level grade
+     */
     public String getLevelGrade() {
         int level = 0;
         double score = getAverageScore();
