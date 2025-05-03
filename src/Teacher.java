@@ -25,4 +25,9 @@ public class Teacher extends Person {
         return courseTeaching;
     }
 
+    public void addCoruse(String courseCode){
+        if(!courseTeaching.contains(courseCode)){
+            courseTeaching.add(courseCode);
+        }
+    }
 }
