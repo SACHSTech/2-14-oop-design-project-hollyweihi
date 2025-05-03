@@ -9,5 +9,8 @@ public class Main {
 
         Student student1 = new Student("Holly", 333333);
         Student student2 = new Student("Bob", 200002);
+
+        mathTeacher.addCourse("MDM4U");
+        scienceTeacher.addCourse("SBI4U");
     }
 }
