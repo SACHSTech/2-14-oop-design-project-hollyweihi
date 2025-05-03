@@ -19,6 +19,12 @@ public class Main {
 
             System.out.println("How many courses do you teach? ");
             int numCourses = Integer.parseInt(keyboard.readLine());
+
+            for(int i = 0; i < numCourses; i++){
+                System.out.println("Enter course code for course: ");
+                String courseCode = keyboard.readLine();
+                teacher.addCourse(courseCode);
+            }
         }
 
         // Enter ID
