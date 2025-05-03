@@ -10,7 +10,7 @@ See instructions [here](INSTRUCTIONS.md) for details.
 *INSERT UML CLASS DIAGRAM HERE*  
 
 ## Summary
-*Write a brief summary that describes the real-world system you are modelling in your design.*
+This is a system for calculating the student's grade. The program allows students to input their course, grade for this course, weight of each course, and absence from this course. By using this information, the program and tell the average of this score and if the student is been kicked out of the course. This program allows teachers to add the course that a teacher is teaching and print out a summary in the end.
 
 ### Expected Outcome:
 #### Student
