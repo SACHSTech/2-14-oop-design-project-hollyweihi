@@ -1,10 +1,12 @@
 import java.util.List;
+import java.util.ArrayList;
 
 public class Grade {
     private List<Double> scores;
     private String courseName;
     private String courseId;
     private double totalWeight;
+    private List<Teacher> teachers;
 
     /**
      * Construct a new Grade.
@@ -22,6 +24,7 @@ public class Grade {
         this.courseName = courseName;
         this.courseId = courseId;
         this.totalWeight = totalWeight;
+        this.teachers = new ArrayList();
     }
 
     /**
@@ -157,5 +160,5 @@ public class Grade {
         return "Level " + level;
     }
 
-    
+
 }
