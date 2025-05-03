@@ -55,4 +55,8 @@ public class Student extends Person {
 
         return average;
     }
+
+    public String toString(){
+        return getName() + "(" + studentId + ")";
+    }
 }

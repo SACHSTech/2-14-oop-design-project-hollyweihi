@@ -27,7 +27,7 @@ public class Main {
         System.out.println("Students");
         for(int i = 0; i < students.size(); i++){
             Student student = students.get(i);
-            System.out.println(student);
+            System.out.println(student);            
         }
     }
 }
