@@ -15,7 +15,7 @@ public class Student extends Person {
      * @author Holly Wei
      */
 
-    public Student(String name, int studentId, List<Grade> grades) {
+    public Student(String name, int studentId) {
         super(name);
         this.studentId = studentId;
         this.grades = new ArrayList();
