@@ -30,4 +30,8 @@ public class Teacher extends Person {
             courseTeaching.add(courseCode);
         }
     }
+
+    public String toString(){
+        return "Teacher: " + getName() + "(" + getEmployeeId() + ") have " + getCoursesTeaching(); 
+    }
 }
