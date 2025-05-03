@@ -16,6 +16,9 @@ public class Main {
 
             System.out.println("Please Enter your Department: ");
             String department = keyboard.readLine();
+
+            System.out.println("How many courses do you teach? ");
+            int numCourses = Integer.parseInt(keyboard.readLine());
         }
 
         // Enter ID
