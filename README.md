@@ -69,3 +69,26 @@ GPA: 3.3485714285714288
 Letter Grade: A-
 Level Grade: Level 4
 ```
+
+#### Teacher
+
+```
+Are you a student or teacher (S/T): 
+T
+Please enter your Employee ID (6 digit): 
+123456
+Please enter your name: 
+Holly
+Please Enter your Department: 
+Math
+How many courses do you teach? 
+3              
+Enter course code for course: 
+MDM4U
+Enter course code for course: 
+MPM2D 
+Enter course code for course: 
+MCR3U
+Teacher Profile
+Teacher: Holly(123456) have [MDM4U, MPM2D, MCR3U]
+```
