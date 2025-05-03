@@ -13,4 +13,5 @@ public abstract class Person {
         String answer = ("This is a Summary of " + name + "'s course grade.");
         return answer; 
     }
+
 }

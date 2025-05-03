@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Student extends Person {
@@ -7,11 +8,15 @@ public class Student extends Person {
     public Student(String name, int studentId, List<Grade> grades) {
         super(name);
         this.studentId = studentId;
-        this.grades = grades;
+        this.grades = new ArrayList();
     }
 
     public int getStudentID() {
         return studentId;
+    }
+
+    public List<Grade> getGrades(){
+        return grades;
     }
 
     public double getAverage() {

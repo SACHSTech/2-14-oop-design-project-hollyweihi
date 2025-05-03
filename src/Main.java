@@ -28,8 +28,7 @@ public class Main {
         }
 
         // Create List
-        List<Grade> grades = new ArrayList();
-        Student student = new Student(name, studentId, grades);
+        Student student = new Student(name, studentId, new ArrayList<>());
         double totalWeight = 0;
 
         for (int i = 0; i < numberOfCourse; i++) {
@@ -76,12 +75,11 @@ public class Main {
                         weights = Double.parseDouble(keyboard.readLine());
                         totalWeight += weights;
                         totalGrade = score * (weights / 100);
-                        System.out.println(totalWeight);
                         scores.add(totalGrade);
                     }
                 }
 
-                grades.add(new Grade(scores, courseName, courseCode, totalWeight));
+                student. getGrades().add(new Grade(scores, courseName, courseCode, totalWeight));
             }
         }
         // Summary
@@ -94,8 +92,8 @@ public class Main {
         // Average
         System.out.println();
         System.out.println("Course Grade: ");
-        for (int i = 0; i < grades.size(); i++) {
-            Grade grade = grades.get(i);
+        for (int i = 0; i < student. getGrades().size(); i++) {
+            Grade grade = student.getGrades().get(i);
             System.out.println("\n" + grade.getCourseName());
             System.out.println("Average: " + grade.getAverageScore());
             System.out.println("GPA: " + grade.getGPA());
