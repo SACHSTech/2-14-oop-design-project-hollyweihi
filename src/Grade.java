@@ -6,7 +6,7 @@ public class Grade {
     private String courseName;
     private String courseId;
     private double totalWeight;
-    private List<Teacher> teachers;
+    private Teacher teachers;
 
     /**
      * Construct a new Grade.
@@ -24,7 +24,7 @@ public class Grade {
         this.courseName = courseName;
         this.courseId = courseId;
         this.totalWeight = totalWeight;
-        this.teachers = new ArrayList();
+        this.teachers = teachers;
     }
 
     /**
@@ -160,5 +160,7 @@ public class Grade {
         return "Level " + level;
     }
 
-
+    public Teacher getTeacher(){
+        return teachers;
+    }
 }
