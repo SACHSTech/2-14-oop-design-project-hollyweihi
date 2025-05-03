@@ -14,6 +14,9 @@ public class Main {
             System.out.println("Please enter your Employee ID (6 digit): ");
             int employeeID = Integer.parseInt(keyboard.readLine());
 
+            System.out.println("Please enter your name: ");
+            String name = keyboard.readLine();
+
             System.out.println("Please Enter your Department: ");
             String department = keyboard.readLine();
 
