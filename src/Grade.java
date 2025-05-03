@@ -5,7 +5,6 @@ public class Grade {
     private List<Double> scores;
     private String courseName;
     private String courseId;
-    private double totalWeight;
     private Teacher teacher;
 
     /**
@@ -23,7 +22,6 @@ public class Grade {
         this.scores = scores;
         this.courseName = courseName;
         this.courseId = courseId;
-        this.totalWeight = totalWeight;
         this.teacher = teacher;
     }
 
@@ -34,15 +32,6 @@ public class Grade {
      */
     public List<Double> getScore() {
         return scores;
-    }
-
-    /**
-     * Return total weight of score.
-     * 
-     * @return total weight of scores
-     */
-    public double getWeight() {
-        return totalWeight;
     }
 
     /**
@@ -74,7 +63,7 @@ public class Grade {
             total += scores.get(i);
         }
 
-        return (total / totalWeight) * 100;
+        return (total / scores.size());
 
     }
 

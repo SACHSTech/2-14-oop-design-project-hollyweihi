@@ -20,8 +20,10 @@ public class Main {
         mathTeacher.addCourse("MDM4U");
         scienceTeacher.addCourse("SBI4U");
 
-        mathTeacher.assignGrade(student1, "MDM4U", 89.5);
+        mathTeacher.assignGrade(student1, "MDM4U", 100);
+        mathTeacher.assignGrade(student1, "MDM4U", 95);
         scienceTeacher.assignGrade(student2, "SBI4U", 76);
+        scienceTeacher.assignGrade(student2, "SBI4U", 100);
 
         System.out.println("Teachers");
         System.out.println(mathTeacher);
@@ -31,6 +33,12 @@ public class Main {
         for(int i = 0; i < students.size(); i++){
             Student student = students.get(i);
             System.out.println(student);            
+
+        List<Grade> grades = student.getGrades();
+        for(int j = 0; j < grades.size(); j++){
+            Grade grade = grades.get(j);
+            System.out.println(" " + grade.getCourseId() + ": " + grade.getAverageScore() + "% (" + grade.getLetterGrade() + ", GPA: " + grade.getGPA() + ")");
         }
+    }
     }
 }
