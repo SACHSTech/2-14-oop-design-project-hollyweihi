@@ -30,6 +30,10 @@ public class Main {
                 String courseCode = keyboard.readLine();
                 teacher.addCourse(courseCode);
             }
+
+            System.out.println("Teacher Profile");
+            System.out.println(teacher.toString());
+
         } else if (user.equals("S")) {
 
         // Enter ID

@@ -1,4 +1,4 @@
-public abstract class Person {
+public class Person {
     private String name;
 
     public Person(String name) {
@@ -7,11 +7,6 @@ public abstract class Person {
 
     public String getName() {
         return name;
-    }
-
-    public String toString(){
-        String answer = ("This is a Summary of " + name + "'s course grade.");
-        return answer; 
     }
 
 }
