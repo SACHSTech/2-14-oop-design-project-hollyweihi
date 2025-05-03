@@ -62,6 +62,15 @@ public class Teacher extends Person {
         }
     }
 
+    public void assignGrade(Student student, String courseCode, double score){
+        List<Double> scores = new ArrayList();
+        scores.add(score);
+        Grade grade = new Grade(scores, courseCode, courseCode);
+        if(getCoursesTeaching().contains(courseCode)){
+            student.addGrade(grade);
+        }
+    }
+
     public String toString() {
         return getName() + "(" + getEmployeeId() + ") have " + getCoursesTeaching();
     }
