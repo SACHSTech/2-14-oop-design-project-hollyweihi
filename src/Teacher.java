@@ -6,7 +6,7 @@ public class Teacher extends Person {
     private String department;
     private List<String> courseTeaching;
 
-    public Teacher(String name, int employeeId, String department) {
+    public Teacher(String name, int employeeId, String department, List<String> courseTeaching) {
         super(name);
         this.employeeId = employeeId;
         this.department = department;
@@ -25,7 +25,7 @@ public class Teacher extends Person {
         return courseTeaching;
     }
 
-    public void addCoruse(String courseCode){
+    public void addCourse(String courseCode){
         if(!courseTeaching.contains(courseCode)){
             courseTeaching.add(courseCode);
         }
