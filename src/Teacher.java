@@ -1,14 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Teacher extends Person {
     private int employeeId;
+    private String department;
+    private List<String> courseTeaching;
 
-    public Teacher(String name, int employeeId) {
+    public Teacher(String name, int employeeId, String department) {
         super(name);
         this.employeeId = employeeId;
+        this.department = department;
+        this.courseTeaching = new ArrayList<>();
     }
 
     public int getEmployeeId() {
         return employeeId;
     }
 
-    
+    public String getDepartment(){
+        return department;
+    }
+
+    public List<String> getCoursesTeaching(){
+        return courseTeaching;
+    }
+
 }
