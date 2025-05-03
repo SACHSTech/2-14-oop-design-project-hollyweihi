@@ -12,5 +12,11 @@ public class Main {
 
         mathTeacher.addCourse("MDM4U");
         scienceTeacher.addCourse("SBI4U");
+
+        System.out.println("Teachers");
+        System.out.println(mathTeacher);
+        System.out.println(scienceTeacher);
+
+        
     }
 }
