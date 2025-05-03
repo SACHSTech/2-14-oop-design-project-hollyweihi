@@ -20,12 +20,14 @@ public class Main {
             System.out.println("How many courses do you teach? ");
             int numCourses = Integer.parseInt(keyboard.readLine());
 
+            Teacher teacher = new Teacher(name, employeeID, department, new ArrayList());
+
             for(int i = 0; i < numCourses; i++){
                 System.out.println("Enter course code for course: ");
                 String courseCode = keyboard.readLine();
                 teacher.addCourse(courseCode);
             }
-        }
+        } else if (user.equals("S")) {
 
         // Enter ID
         System.out.println("Please Enter your Student ID (6 digit): ");
@@ -120,5 +122,8 @@ public class Main {
             System.out.println("Letter Grade: " + grade.getLetterGrade());
             System.out.println("Level Grade: " + grade.getLevelGrade());
         }
+    } else{
+        System.out.println("This is not a possible input. ");
     }
+}
 }
