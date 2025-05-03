@@ -7,7 +7,7 @@ public class Main {
     private static List<Student> students = new ArrayList();
 
     public static void main(String[] args) throws IOException {
-        Teacher mathTeacher = new Teacher("Mr.Smith", 100001, "Math");
+        Teacher mathTeacher = new Teacher("Mr. Smith", 100001, "Math");
         Teacher scienceTeacher = new Teacher("Dr. Johnson", 100002, "Science");
         teachers.add(mathTeacher);
         teachers.add(scienceTeacher);
@@ -24,6 +24,10 @@ public class Main {
         System.out.println(mathTeacher);
         System.out.println(scienceTeacher);
 
-
+        System.out.println("Students");
+        for(int i = 0; i < students.size(); i++){
+            Student student = students.get(i);
+            System.out.println(student);
+        }
     }
 }

@@ -55,13 +55,4 @@ public class Student extends Person {
 
         return average;
     }
-
-    public static void printStudentGrade(Student student){
-        System.out.println(student);
-        System.out.println("Grade: ");
-        for(int i = 0; i < grades.size(); i++){
-            Grade grade = grades.get(i);
-            System.out.println(grade.getCourseId(), grade.getAverageScore(), grade.getTeacher().getName());
-        }
-    }
 }
