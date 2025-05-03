@@ -3,6 +3,10 @@
 
 See instructions [here](INSTRUCTIONS.md) for details.
 
+
+![UML Class Diagram](/2.14UML.drawio.png)
+
+
 *INSERT UML CLASS DIAGRAM HERE*  
 
 ## Summary
