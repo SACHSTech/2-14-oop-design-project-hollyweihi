@@ -20,11 +20,14 @@ public class Main {
         mathTeacher.addCourse("MDM4U");
         scienceTeacher.addCourse("SBI4U");
 
+        mathTeacher.assignGrade(student1, "MDM4U", 89.5);
+        scienceTeacher.assignGrade(student2, "SBI4U", 76);
+
         System.out.println("Teachers");
         System.out.println(mathTeacher);
         System.out.println(scienceTeacher);
 
-        System.out.println("Students");
+        System.out.println("\n Students");
         for(int i = 0; i < students.size(); i++){
             Student student = students.get(i);
             System.out.println(student);            

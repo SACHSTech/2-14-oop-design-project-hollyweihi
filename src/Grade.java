@@ -6,7 +6,7 @@ public class Grade {
     private String courseName;
     private String courseId;
     private double totalWeight;
-    private Teacher teachers;
+    private Teacher teacher;
 
     /**
      * Construct a new Grade.
@@ -19,12 +19,12 @@ public class Grade {
      * @author Holly Wei
      */
 
-    public Grade(List<Double> scores, String courseName, String courseId, double totalWeight) {
+    public Grade(List<Double> scores, String courseName, String courseId) {
         this.scores = scores;
         this.courseName = courseName;
         this.courseId = courseId;
         this.totalWeight = totalWeight;
-        this.teachers = teachers;
+        this.teacher = teacher;
     }
 
     /**
@@ -161,6 +161,6 @@ public class Grade {
     }
 
     public Teacher getTeacher(){
-        return teachers;
+        return teacher;
     }
 }
