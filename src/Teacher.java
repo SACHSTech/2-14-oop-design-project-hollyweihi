@@ -17,7 +17,7 @@ public class Teacher extends Person {
      * @author Holly Wei
      */
 
-    public Teacher(String name, int employeeId, String department, List<String> courseTeaching) {
+    public Teacher(String name, int employeeId, String department) {
         super(name);
         this.employeeId = employeeId;
         this.department = department;
