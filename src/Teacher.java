@@ -63,6 +63,6 @@ public class Teacher extends Person {
     }
 
     public String toString() {
-        return "Teacher: " + getName() + "(" + getEmployeeId() + ") have " + getCoursesTeaching();
+        return getName() + "(" + getEmployeeId() + ") have " + getCoursesTeaching();
     }
 }
